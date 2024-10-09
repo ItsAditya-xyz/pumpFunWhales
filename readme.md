@@ -7,6 +7,8 @@ How it was built:
 - Created a SynterNet stream `uniswapwhales.pumpfunwhales.track` where real time data of pump.fun are posted
 - On the frontedn, synternet streams are listened and displayed in real time
 
+website: https://pump-fun-whales-6bv6.vercel.app/
+
 Coming soon:
 
 pump.fun wallet trackers!
