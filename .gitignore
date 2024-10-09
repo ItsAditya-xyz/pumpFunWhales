@@ -1,0 +1,25 @@
+# Server-publisher
+/server-publisher/node_modules/
+/server-publisher/.env
+/server-publisher/.env.*
+/server-publisher/package-lock.json
+
+# Frontend
+/frontend/node_modules/
+/frontend/.env
+/frontend/.env.*
+/frontend/.next/
+/frontend/package-lock.json
+
+# General
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE-specific files
+.idea/
+.vscode/
+*.swp
+*.swo
