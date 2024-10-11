@@ -14,8 +14,8 @@ const NewTradeAnimation = ({ tradeData }) => {
       {tradeData.map((trade, index) => (
         <div
           key={index}
-          className={` left-0 w-full mt-2 bg-gradient-to-r ${trade.is_buy?"bg-green-600": "bg-red-500"} rounded-lg shadow-lg transition-all duration-500 ease-in-out `}>
-          <div className='flex items-center justify-between p-4 text-white'>
+          className={` left-0 w-full mt-2 bg-gradient-to-r ${trade.is_buy?"bg-[#86efac]": "bg-[#fca5a5]"} rounded-lg shadow-lg transition-all duration-500 ease-in-out text-gray-800`}>
+          <div className='flex items-center justify-between p-4 text-gray-700'>
             <div className='flex items-center space-x-4'>
               <img
                 src={
@@ -36,7 +36,7 @@ const NewTradeAnimation = ({ tradeData }) => {
                     : trade.user}
                 </a>
                 <a
-                  className='text-sm text-purple-200 underline'
+                  className='text-sm underline text-gray-800'
                   href={`https://explorer.solana.com/tx/${trade.signature}`}
                   target='_blank'
                   >
@@ -48,7 +48,7 @@ const NewTradeAnimation = ({ tradeData }) => {
               <p className='text-xl font-bold'>
                 {Math.round((trade.sol_amount / 1e9) * 100) / 100} SOL
               </p>
-              <p className='text-sm text-purple-200'>worth of</p>
+              <p className='text-sm text-gray-700'>worth of</p>
             </div>
             <a
               className='flex items-center space-x-4'
@@ -56,7 +56,7 @@ const NewTradeAnimation = ({ tradeData }) => {
               target='_blank'>
               <div className='text-right'>
                 <p className='font-bold'>${trade.symbol}</p>
-                <p className='text-sm text-purple-200'>coin</p>
+                <p className='text-sm text-gray-700'>coin</p>
               </div>
               <img
                 src={trade.image_uri}
