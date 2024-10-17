@@ -61,10 +61,10 @@ const Summation = ({ tradeData }) => {
               </a>
 
               <p className='text-center text-green-600 text-sm'>
-                Total Buys: {Math.round((data.buyAmount / 1e9) * 100) / 100} SOL
+                Inflows: {Math.round((data.buyAmount / 1e9) * 100) / 100} SOL
               </p>
               <p className='text-center text-red-600 text-sm'>
-                Total Sales: {Math.round((data.sellAmount / 1e9) * 100) / 100}{" "}
+               Outflows: {Math.round((data.sellAmount / 1e9) * 100) / 100}{" "}
                 SOL
               </p>
             </div>
