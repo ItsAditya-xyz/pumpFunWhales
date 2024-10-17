@@ -40,7 +40,7 @@ const Summation = ({ tradeData }) => {
   );
 
   return (
-    <div className='relative w-full mt-10 mx-auto'>
+    <div className='relative w-full mt-10 mx-auto pr-2'>
       <h2 className='text-2xl font-bold mb-4 text-center'>Top MemeCoins</h2>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
         {sortedSymbols.map(([symbol, data]) => {
@@ -56,14 +56,14 @@ const Summation = ({ tradeData }) => {
                 href={`https://pump.fun/${data.mint}`}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='block text-xl font-semibold text-center text-blue-600 hover:underline'>
+                className='block text-base font-semibold text-center text-blue-600 hover:underline'>
                 {symbol}
               </a>
 
-              <p className='text-center text-green-600'>
+              <p className='text-center text-green-600 text-sm'>
                 Total Buys: {Math.round((data.buyAmount / 1e9) * 100) / 100} SOL
               </p>
-              <p className='text-center text-red-600'>
+              <p className='text-center text-red-600 text-sm'>
                 Total Sales: {Math.round((data.sellAmount / 1e9) * 100) / 100}{" "}
                 SOL
               </p>
