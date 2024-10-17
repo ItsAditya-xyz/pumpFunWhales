@@ -40,8 +40,8 @@ const Summation = ({ tradeData }) => {
   );
 
   return (
-    <div className='relative w-full mt-10 mx-auto pr-2'>
-      <h2 className='text-2xl font-bold mb-4 text-center'>Top MemeCoins</h2>
+    <div className='relative w-full mt-12 mx-auto pr-2'>
+     
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
         {sortedSymbols.map(([symbol, data]) => {
           const totalVolume = data.buyAmount + data.sellAmount;

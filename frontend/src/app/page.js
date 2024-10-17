@@ -87,6 +87,7 @@ export default function Home() {
           <div className='flex w-full pl-14 flex-row justify-center items-center  '>
             <div className='w-full flex justify-center space-x-2 '>
               <NewTradeAnimation tradeData={pumpFunTrades} />
+              
               {pumpFunTrades.length > 0 && (
                 <Summation tradeData={pumpFunTrades} />
               )}
