@@ -28,7 +28,7 @@ const NewTradeAnimation = ({ tradeData }) => {
 
               <div className="flex flex-col">
                 <a
-                  className='font-semibold bg-purple-500 rounded-md px-3 py-1 hover:bg-purple-600 text-sm '
+                  className='font-semibold bg-purple-500 rounded-md px-1 sm:px-3 py-1 hover:bg-purple-600 text-xs sm:text-sm '
                   href={`https://pump.fun/profile/${trade.user}`}
                   target='_blank'>
                   {trade.user.length > 8
@@ -55,7 +55,7 @@ const NewTradeAnimation = ({ tradeData }) => {
               href={`https://pump.fun/${trade.mint}`}
               target='_blank'>
               <div className='text-right'>
-                <p className='font-bold'>${trade.symbol}</p>
+                <p className='font-bold text-sm'>${trade.symbol}</p>
                 <p className='text-sm text-purple-200'>coin</p>
               </div>
               <img
