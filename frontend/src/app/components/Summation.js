@@ -56,7 +56,7 @@ const Summation = ({ tradeData }) => {
                 href={`https://pump.fun/${data.mint}`}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='block text-base font-semibold text-center text-blue-600 hover:underline'>
+                className='block text-base font-semibold text-center text-blue-300 hover:underline'>
                 {symbol}
               </a>
 
