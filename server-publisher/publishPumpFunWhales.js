@@ -66,6 +66,14 @@ async function main() {
 
   let pingInterval = 25000; // Default, will be updated from server message
   let pingTimer;
+  let cleanupFunction = null;
+
+  function cleanup() {
+    if (cleanupFunction) {
+      cleanupFunction();
+      cleanupFunction = null;
+    }
+  }
 
   function startPingPong() {
     if (pingTimer) clearInterval(pingTimer);
@@ -74,6 +82,12 @@ async function main() {
       console.log("Ping sent");
     }, pingInterval);
   }
+
+  cleanupFunction = () => {
+    if (pingTimer) clearInterval(pingTimer);
+    if (socket) socket.close();
+    // Any other cleanup needed...
+  };
 
   socket.on("open", () => {
     console.log(`Connected to ${websocketUri}`);
@@ -113,11 +127,12 @@ async function main() {
 
   socket.on("close", () => {
     console.log("WebSocket connection closed");
-    if (pingTimer) clearInterval(pingTimer);
+    cleanup();
+  
     // Try to reconnect after 5 seconds
     setTimeout(() => {
       console.log("Reconnecting...");
-      socket.connect();
+      main()
     }, 2000);
   });
 

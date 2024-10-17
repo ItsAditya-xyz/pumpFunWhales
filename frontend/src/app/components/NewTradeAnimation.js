@@ -24,11 +24,11 @@ const NewTradeAnimation = ({ tradeData }) => {
                   ]
                 }
                 alt={trade.creator_username}
-                className='rounded-full w-12 h-12'></img>
+                className='rounded-full w-5 h-5 sm:w-12 sm:h-12'></img>
 
               <div className="flex flex-col">
                 <a
-                  className='font-bold bg-purple-500 rounded-md px-3 py-1 hover:bg-purple-600'
+                  className='font-semibold bg-purple-500 rounded-md px-3 py-1 hover:bg-purple-600 text-sm '
                   href={`https://pump.fun/profile/${trade.user}`}
                   target='_blank'>
                   {trade.user.length > 8
@@ -45,7 +45,7 @@ const NewTradeAnimation = ({ tradeData }) => {
               </div>
             </div>
             <div className='text-center'>
-              <p className='text-xl font-bold'>
+              <p className='text-sm font-semibold'>
                 {Math.round((trade.sol_amount / 1e9) * 100) / 100} SOL
               </p>
               <p className='text-sm text-purple-200'>worth of</p>
@@ -61,7 +61,7 @@ const NewTradeAnimation = ({ tradeData }) => {
               <img
                 src={trade.image_uri}
                 alt={trade.symbol}
-                className='rounded-full w-12 h-12'></img>
+                className='rounded-full w-6 h-6 sm:w-12 sm:h-12'></img>
             </a>
           </div>
         </div>

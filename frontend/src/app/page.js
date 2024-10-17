@@ -5,6 +5,7 @@ import { subscribe, createAppJwt } from "pubsub-ws";
 
 import NewTradeAnimation from "./components/NewTradeAnimation";
 import Loader from "./components/Loader";
+import Summation from "./components/Summation";
 
 const natsWsUrl =
   "wss://europe-west3-gcp-dl-testnet-brokernode-frankfurt01.synternet.com";
@@ -84,12 +85,11 @@ export default function Home() {
             </div>
           )}
           <div className='flex w-full pl-14 flex-row justify-center items-center  '>
-            <div className='w-full max-w-4xl mb-8'>
-              <div className='flex items-center mb-3'></div>
-
-            
-
+            <div className='w-full flex justify-center space-x-2 '>
               <NewTradeAnimation tradeData={pumpFunTrades} />
+              {pumpFunTrades.length > 0 && (
+                <Summation tradeData={pumpFunTrades} />
+              )}
             </div>
           </div>
         </div>
